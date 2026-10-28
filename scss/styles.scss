@@ -1,0 +1,41 @@
+@import 'variables';
+@import 'base';
+@import 'layout';
+
+// Стили карточек
+.card {
+  @include card-style;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  &__title {
+    margin: 0 0 calc($space / 2) 0;
+    font-size: 1.25rem;
+    color: $accent;
+  }
+
+  &__category {
+    display: inline-block;
+    background: rgba($accent, 0.1);
+    color: $accent;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-bottom: $space;
+  }
+
+  &__desc {
+    color: #6b7280;
+    font-size: 0.95rem;
+    margin-bottom: $space;
+  }
+
+  &__price {
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+}

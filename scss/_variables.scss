@@ -1,0 +1,24 @@
+// Цвета из theme.json
+$accent: #315efb;
+$surface: #ffffff;
+$background: #f5f7fb;
+$text: #1f2937;
+$border: #e5e7eb;
+
+// Отступы и радиусы
+$radius: 14px;
+$space: 16px;
+$container-width: 1200px;
+
+// Брейкпоинты для адаптивности
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 1024px;
+
+// Миксин для красивых карточек (повторно используемый блок)
+@mixin card-style {
+  background: $surface;
+  border-radius: $radius;
+  padding: $space;
+  border: 1px solid $border;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}

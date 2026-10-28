@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Каталог курсов</title>
+  <link rel="stylesheet" href="scss/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <h1>Каталог курсов</h1>
+    </div>
+  </header>
+
+  <main class="container main-layout">
+    <!-- Панель фильтров -->
+    <aside class="sidebar">
+      <h2>Фильтры</h2>
+      <div id="filter-buttons" class="filter-buttons">
+        <button class="filter-btn active" data-category="all">Все</button>
+        <button class="filter-btn" data-category="Книги">Книги</button>
+        <button class="filter-btn" data-category="Курсы">Курсы</button>
+        <button class="filter-btn" data-category="Инструменты">Инструменты</button>
+      </div>
+    </aside>
+
+    <!-- Каталог карточек -->
+    <section class="catalog" id="catalog-container">
+      <!-- Сюда скрипт вставит карточки -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Каталог курсов</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

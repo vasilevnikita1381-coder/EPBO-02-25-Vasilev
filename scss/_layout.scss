@@ -1,0 +1,62 @@
+// Сетка: Панель фильтров слева, каталог справа
+.main-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: calc($space * 2);
+  margin-top: calc($space * 2);
+  margin-bottom: calc($space * 2);
+}
+
+// Панель фильтров
+.sidebar {
+  @include card-style;
+  height: fit-content;
+}
+
+// Сетка карточек (адаптивная)
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: $space;
+}
+
+// Адаптивность для планшетов и телефонов
+@media (max-width: $breakpoint-tablet) {
+  .main-layout {
+    grid-template-columns: 1fr; // Фильтры переезжают наверх
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .catalog {
+    grid-template-columns: 1fr; // На телефоне одна колонка
+  }
+}
+// Стили для панели фильтров
+.filter-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: calc($space / 2);
+}
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid $border;
+  padding: 8px 12px;
+  border-radius: $radius;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1rem;
+  transition: all 0.2s;
+
+  &:hover {
+    border-color: $accent;
+    color: $accent;
+  }
+
+  &.active {
+    background: $accent;
+    color: white;
+    border-color: $accent;
+  }
+}
